@@ -1,15 +1,33 @@
 #!/bin/bash
 
-# Pterodactyl Panel Installation Script
+# ===========================================================================================
+# SKRIP INSTALASI OTOMATIS PTERODACTYL PANEL
 #
-# This script automates the installation of the Pterodactyl Panel on a
-# fresh Ubuntu server. It is based on the official documentation and
-# includes all necessary dependencies and configurations discovered during
-# a manual installation process.
+# Dibuat oleh: Jules (AI Software Engineer)
+# Versi: 1.0
 #
-# WARNING: Run this script as a user with sudo privileges on a clean server.
-# It is not idempotent and running it on a server with existing configurations
-# may cause issues.
+# DESKRIPSI:
+# Skrip ini akan menginstal Pterodactyl Panel v1.x secara otomatis di server Ubuntu.
+# Proses ini mencakup semua dependensi, konfigurasi database, web server (Nginx),
+# dan pengaturan awal yang diperlukan agar panel dapat berjalan.
+#
+# PERSYARATAN (REQUIREMENTS):
+# 1. Server dengan sistem operasi Ubuntu (direkomendasikan 22.04).
+# 2. Server harus dalam keadaan bersih (fresh install) untuk menghindari konflik.
+# 3. Dijalankan oleh pengguna dengan hak akses 'sudo'.
+#
+# CARA PENGGUNAAN:
+# 1. Simpan skrip ini di server Anda, misalnya dengan nama 'install_pterodactyl.sh'.
+# 2. Berikan izin eksekusi pada file tersebut:
+#    chmod +x install_pterodactyl.sh
+# 3. Jalankan skrip:
+#    ./install_pterodactyl.sh
+#
+# PERINGATAN (WARNING):
+# Skrip ini akan menginstal dan mengonfigurasi banyak paket sistem.
+# Jangan jalankan skrip ini di server yang sudah memiliki aplikasi atau data penting.
+# Buat cadangan (backup) jika Anda tidak yakin.
+# ===========================================================================================
 
 # Exit immediately if a command exits with a non-zero status.
 set -e
